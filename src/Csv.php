@@ -998,7 +998,6 @@ class Csv {
         $operators = array(
             '=',
             'equals',
-            'is',
             '!=',
             'is not',
             '<',
@@ -1037,7 +1036,7 @@ class Csv {
             }
 
             if (array_key_exists($field, $row)) {
-                if (($op == '=' || $op == 'equals' || $op == 'is') && $row[$field] == $value) {
+                if (($op == '=' || $op == 'equals') && $row[$field] == $value) {
                     return '1';
                 } elseif (($op == '!=' || $op == 'is not') && $row[$field] != $value) {
                     return '1';
